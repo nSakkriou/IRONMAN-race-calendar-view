@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     
-    <script src="../../fullcalendar-6.1.8/dist/index.global.min.js"></script>
+    <script src='static/fullcalendar-6.1.8/dist/index.global.min.js'></script>
 
     <script defer>
         document.addEventListener('DOMContentLoaded', function() {
@@ -15,6 +15,10 @@
                 initialView: 'dayGridMonth'
             });
         calendar.render();
+
+        const data = JSON.parse(document.querySelector("#data").textContent)
+
+        console.log(data)
         
     });
     </script>
@@ -41,7 +45,7 @@
 <body>
     <div id="calendar"></div>
 
-    <div>
+    <div id="data" style="display:none;">
         {{data}}
     </div>
 </body>
