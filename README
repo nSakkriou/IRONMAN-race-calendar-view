@@ -1,0 +1,8 @@
+Python scripts to generate a interactive calendar filled by all IRONMAN and IRONMAN 70.3 announced.
+To use it :
+- launch run.bat, it will scrap IRONMAN races page (scrapper.py) and launch an api (api.py) on 8000 port. On "/" endpoint, you find a calendar filled with data.
+
+To launch calendar without re-scrap, you just have to passed and arg to run.bat script
+Example : 
+- With scrapping : ./run.bat
+- Without scrapping : ./run.bat flag
