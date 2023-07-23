@@ -17,8 +17,16 @@
         calendar.render();
 
         const data = JSON.parse(document.querySelector("#data").textContent)
-
-        console.log(data)
+        
+        for(let row in data) {
+            row = data[row]
+            const date = new Date(`${row.date.month} ${row.date.day}, ${row.date.year}`)
+            
+            calendar.addEvent({
+                title : row.title,
+                start: date
+            })
+        }
         
     });
     </script>

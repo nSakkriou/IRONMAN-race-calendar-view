@@ -16,7 +16,6 @@ with open("data.json", 'r', encoding="utf8") as f:
 @app.get("/")
 def root(request: Request):
     context = {"request" : request} | data
-    print(context)
     return templates.TemplateResponse("index.html", context)
 
 if __name__ == "__main__":
